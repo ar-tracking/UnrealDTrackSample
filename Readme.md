@@ -1,12 +1,13 @@
 # DTrack Plugin for Unreal Engine 4 Sample Scene
 
-An UE4Editor project to demonstrate [UnrealDTrackPlugin](https://www.github.com/ar-tracking/UnrealDTrackPlugin) features.
+An _UE4Editor_ project to demonstrate _[UnrealDTrackPlugin][2]_ features.
 
-
+Play In Editor
 ## Installation
 
 ### Install the Plugin
-- Download [UnrealDTrackPlugin](https://www.github.com/ar-tracking/UnrealDTrackPlugin) and follow the installation instructions there
+- Download the plugin via _[UE4 Marketplace][4]_Play In Editor
+- Alternatively, download _[UnrealDTrackPlugin][2]_ from _Github_ and follow the installation instructions there
 
 
 ### Configure DTrack
@@ -15,7 +16,7 @@ An UE4Editor project to demonstrate [UnrealDTrackPlugin](https://www.github.com/
   * the origin is close to the area where you later want to track your ART targets
   * the Z axis points upwards  
   
-  See the documentation of [UnrealDTrackPlugin](https://www.github.com/ar-tracking/UnrealDTrackPlugin) and the _DTrack User Manual_ for more details on room calibration and adjustment.
+  See the documentation of _[UnrealDTrackPlugin][2]_ and the _DTrack User Manual_ for more details on room calibration and adjustment.
   
 - Open the DTrack2 UI and configure your output data stream (*Tracking > Output*):<br>
   Set the _UDP port_ to _5000_, and enable output of `6d` and `6df2`.
@@ -24,10 +25,10 @@ An UE4Editor project to demonstrate [UnrealDTrackPlugin](https://www.github.com/
 
 
 ### Configure the sample project
-- Download and copy [UnrealDTrackSample](https://www.github.com/ar-tracking/UnrealDTrackSample) into your UE4Editor project directory
-- Open the *.uproject in UE4Editor and agree to rebuild the project
+- Download and copy _[UnrealDTrackSample][3]_ into your _UE4Editor_ project directory
+- Open the *.uproject in _UE4Editor_ and agree to rebuild the project
 - Ignore any error complaining that _TestMap_BuildData_ is missing - this file was removed to reduce project size.<br>
-  In UE4Editor click the _Build_ button in the toolbar to rebuild the map _TestMap_, then save the map
+  In _UE4Editor_ click the _Build_ button in the toolbar to rebuild the map _TestMap_, then save the map
 - In *Edit > Plugins* search for *DTrackPlugin* and enable it
 - In the *Window > Live Link* dialog add the Source *DTrack* and configure *DTrack Settings > Server Settings*
 
@@ -93,14 +94,14 @@ The game mode _MyMode_BP_ uses _FlystickCtrl_BP_ as the Playercontroller class, 
 <br><br>
 
 
-Finally you can test this configuration in _Play In Editor_ mode.
+Finally you can test this configuration in _Play In Editor_ (PIE) mode.
 
 
 <br>
 
-## Preparation of Shipping and Developement Builds
+## Preparation of Shipping and Development Builds
 
-The procedure above assumes you manually configure DTrack as a Live Link source each time you start UE4Editor.<br>
+The procedure above assumes you manually configure DTrack as a Live Link source each time you start _UE4Editor_.
 For shipping or developement builds you can automate this step by first creating a _Live Link Preset_ in the _Window > Live Link_ dialog:
 
 ![Live Link preset](Doc/images/LL-preset.png)
@@ -110,12 +111,16 @@ Next you apply this preset in the Level Blueprint: Create a variable of type _Li
 
 ![Live Link preset in Level Blueprint](Doc/images/ll-preset-level-blueprint.png)
 
-Note that the plugin currently cannot handle a restart of the _Live Link_ source. If the DTrack _Live Link_ source is already set up (manually or automatically), starting a new game in _Play-in-Editor_ mode will not work with the preset mechanism described above. A simple workaround is to restart the Editor in this case, and generally to disconnect the _Apply to Client_ node from the execution path as long as you do not need a packaged build.
+___Note___: Currently the plugin cannot handle a restart of the _Live Link_ source. If the DTrack _Live Link_ source is already set up (manually or automatically), starting a new game in _Play-in-Editor_ mode will not work with the preset mechanism described above. A simple workaround is to restart the Editor in this case, and generally to disconnect the _Apply to Client_ node from the execution path as long as you do not need a packaged build.
+
+___Note___: If the _LiveLink_ connection worked in the viewport as well as in PIE mode, but does not work with shipping builds, you presumably have to adapt the _.uplugin_ file to the version of your _UE4Editor_. Follow the corresponding installation step in _[UnrealDTrackPlugin][1]_.
 
 
 
-
-
+[1]: https://github.com/ar-tracking/UnrealDTrackPlugin#Preparation
+[2]: https://www.github.com/ar-tracking/UnrealDTrackPlugin
+[3]: https://www.github.com/ar-tracking/UnrealDTrackSample
+[4]: https://www.unrealengine.com/marketplace/en-US/store
 
 
 
