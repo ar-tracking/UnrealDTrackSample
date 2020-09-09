@@ -2,11 +2,11 @@
 
 An _UE4Editor_ project to demonstrate _[UnrealDTrackPlugin][2]_ features.
 
-Play In Editor
+
 ## Installation
 
 ### Install the Plugin
-- Download the plugin via _[UE4 Marketplace][4]_Play In Editor
+- Download the plugin via _[UE4 Marketplace][4]_
 - Alternatively, download _[UnrealDTrackPlugin][2]_ from _Github_ and follow the installation instructions there
 
 
