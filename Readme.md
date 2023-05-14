@@ -15,7 +15,7 @@ An _Unreal Editor_ project to demonstrate _[UnrealDTrackPlugin][2]_ features.
 - Calibrate or re-adjust your DTrack room coordinate system so that
   * the origin is close to the area where you later want to track your ART targets
   * the Z axis points upwards  
-  <br>See the documentation of _[UnrealDTrackPlugin][2]_ and the _DTrack User Manual_ for more details on room calibration and adjustment.
+- See the documentation of _[UnrealDTrackPlugin][2]_ and the _DTrack User Manual_ for more details on room calibration and adjustment.
 - Open the DTrack2 UI and configure your output data stream (*Tracking > Output*):<br>
   Set the _UDP port_ to _5000_, and enable output of `6d`, `6df2` or `gl` depending on your available hardware.
 - Start the DTrack measurement of your bodies and/or flysticks.
@@ -70,8 +70,8 @@ At this point, when you look to the Editor viewport, either _Cone_ or _Cube_ sho
 
 ## DTrackFlystickInput Configuration
 
-The DTrackPlugin currently maps Flystick buttons and joystick to Gamepad functions, as listed in _DTrackFlystickInputDevice.cpp_ within the _DTrackPlugin\Source\DTrackInput\Private_ directory.
-In _Edit > Project Settings > Engine > Input_ you can find the mapping of Gamepad functions to actions and axes used in this project.
+_[UnrealDTrackPlugin][2]_  maps Flystick buttons and joystick via a custom _A.R.T. Flystick_ device.
+Note that _[UnrealDTrackPlugin][2]_ can be used with the new __Enhanced Input__ system (since UE4.26) as well as the 'legacy' input system (in _Edit > Project Settings > Engine > Input_, marked as deprecated in UE5.1).
 
 ![Mapping of Gamepad functions used by Flystick buttons and joystick](Doc/images/project-settings-input.PNG)
 <br><br>
