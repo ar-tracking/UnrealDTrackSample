@@ -10,8 +10,11 @@ public class DTrackTestEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		
 		ExtraModuleNames.AddRange( new string[] { "DTrackTest" } );
-
-#if UE_5_4_OR_LATER
+		
+#if UE_5_7_OR_LATER
+		DefaultBuildSettings = BuildSettingsVersion.V6;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_7;
+#elif UE_5_4_OR_LATER
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 #elif UE_5_0_OR_LATER
 		DefaultBuildSettings = BuildSettingsVersion.V4;

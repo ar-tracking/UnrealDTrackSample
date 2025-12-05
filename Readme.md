@@ -137,8 +137,6 @@ Next you apply this preset in the _Level Blueprint_: Create a variable of type _
 
 ![Live Link preset in Level Blueprint](Doc/images/ll-preset-level-blueprint.png)
 
-___Note___: Currently the Flystick (buttons and joystick) to work correctly with packaged builds requires to first start the game, and then the DTrack measurement. Make sure that DTrack measurements are stopped before starting the game.
-
 ___Note___: If the project cannot be opened via the Launcher, but only via the Editors file menu, you presumably have to adjust the _.uproject_ file to the version of your _Unreal Editor_. Follow the corresponding installation step in _[UnrealDTrackPlugin][1]_.
 
 [1]: https://github.com/ar-tracking/UnrealDTrackPlugin#Preparation
